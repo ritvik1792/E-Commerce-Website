@@ -128,7 +128,7 @@
     justify-content: left;
     font-size: 90px;
     width: 450px;
-}
+}   
 
 .brand-name span{
     position: relative;
@@ -403,11 +403,16 @@ input[type="search"]:focus{
     flex-direction: column;
     flex: 1 1 25%;
     align-items: center;
+    transition: transform 0.2s linear;
 }
 
 /* .product-detail-1 ul{
     list-style-type: none;
 } */
+
+.product-detail-2{
+    transform: scale(1.2,1.2);
+}
 
 .product-heading-1{
     padding: 10px;

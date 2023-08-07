@@ -23,7 +23,7 @@ body,input{
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(-45deg, #ff514b, #ff827d);
+    background: linear-gradient(-45deg, #060606, #0c0c0c);
     top: -10%;
     right: 40%;
     transform: translateY(-50%);
@@ -199,11 +199,21 @@ form.sign-up-form{
 .btn.transparent{
     margin: 0;
     background: none;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
+    border: 2px solid #ff514b;
+    color: #ff514b;
     width: 130px;
     height: 41px;
     font-weight: 600;
     font-size: 0.8rem;
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.btn.transparent:hover{
+    color: #fff;
+    background-color: #ff514b;
+    border-color: #fff;
 }
 .panel h3{
     font-weight: 600;
@@ -211,9 +221,13 @@ form.sign-up-form{
     font-size: 1.5rem;
 }
 .image{
+    /* position: absolute; */
     width: 100%;
+    height: 68%;
     transition: 1.1s .4s ease-in-out;
 }
+
+
 
 .right-panel .content, .right-panel .image{
 transform: translateX(880px);

@@ -42,6 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log(cart);
             });
         });
+    
+    
+    const sign_up_btn=document.querySelector('.Signup');
+    const sign_in_btn=document.querySelector('.Signin');
+
+    sign_up_btn.addEventListener('click',()=>{
+        window.location.href='account.html?mode=signup';
+    });
+    sign_in_btn.addEventListener('click',()=>{
+        window.location.href='account.html?mode=signin';
+    });
+    
 })
 
 

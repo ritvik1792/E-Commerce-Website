@@ -2,7 +2,6 @@ import { cart, addToCart, UpdateCart } from '../data/cart.js';
 import { products } from '../data/products.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-
     let productDetail = document.querySelectorAll(".product-detail-1");
     productDetail.forEach(node => {
         node.addEventListener("mouseover", function (event) {
@@ -14,24 +13,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     let producteHTML = '';
+    function addProduct(product){
+       return `
+       <div class="product ${product.name}">
+           <a href="${product.image}">
+               <img src="${product.image}" alt="${product.name}">
+           </a>
+           <p>
+               ${product.name}
+           </p>
+           <div class="product-line">
+               <div class="addcart" data-product-id="${product.id}">Add to Cart</div>
+               <div class="buynowp">Buy Now</div>
+           </div>
+       </div>`; 
+    }
     products.forEach((product) => {
-        producteHTML += `
-        <div class="product ${product.name}">
-            <a href="${product.image}">
-                <img src="${product.image}" alt="${product.name}">
-            </a>
-            <p>
-                ${product.name}
-            </p>
-            <div class="product-line">
-                <div class="addcart" data-product-id="${product.id}">Add to Cart</div>
-                <div class="buynowp">Buy Now</div>
-            </div>
-        </div>`;
+        producteHTML += addProduct(product);
     })
 
 
-    document.querySelector(".container-body").innerHTML = producteHTML;
+    let productBody=document.querySelector(".container-body");
+    productBody.innerHTML=producteHTML;
     document.querySelectorAll('.addcart')
         .forEach(button => {
             button.addEventListener('click', () => {
@@ -53,6 +56,47 @@ document.addEventListener("DOMContentLoaded", () => {
     sign_in_btn.addEventListener('click',()=>{
         window.location.href='account.html?mode=signin';
     });
+
+    // product-nav-bar search
+    const input=document.querySelector('#search');
+    let found=false;
+    input.addEventListener('keypress',function(event){
+        if(event.key=='Enter'){
+            event.preventDefault();
+            found=false;
+            products.forEach((product)=>{
+                if(product.name==event.target.value){
+                    productBody.innerHTML=addProduct(product);
+                    found=true;
+                }
+            })
+            if(!found){
+                productBody.innerHTML = producteHTML;
+            }
+        }else{
+            productBody.innerHTML = producteHTML;
+        }
+    })
+
+    // product-nav-bar buttons 
+    const productsCat=document.querySelectorAll('.main-container .left-bar span');
+    let catProductHTML='';
+    productsCat.forEach((cat)=>{
+        cat.addEventListener('click',()=>{
+            const catSelected=cat.dataset.id;
+            if(catSelected=='all'){
+                productBody.innerHTML=producteHTML;
+            }else{
+                catProductHTML=''
+                products.forEach((product)=>{
+                    if(product.cat==catSelected){
+                        catProductHTML+=addProduct(product);
+                    }
+                })
+                productBody.innerHTML=catProductHTML;
+            }
+        })
+    })
     
 })
 

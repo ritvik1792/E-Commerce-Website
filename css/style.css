@@ -5,6 +5,7 @@
     padding: 0;
     font-family: 'Labrada', serif;
     scroll-behavior: smooth;
+    cursor: pointer;
 }
 
 body{
@@ -224,10 +225,11 @@ body{
     display: flex;
     justify-content: flex-start;
     border: 1px solid rgb(228, 227, 227);
+    cursor: pointer;
 }
 
 
-.nav-bar a:hover{
+.nav-bar span:hover{
     color: #ff4299;
 }
 .left-bar{
@@ -245,8 +247,7 @@ body{
     margin: 5px;
 }
 
-.left-bar a{
-    text-decoration: none;
+.left-bar span{
     color: black;
 }
 

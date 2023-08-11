@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/cartpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9bba81049d.js" crossorigin="anonymous"></script>
+    <title>blackDOT</title>
+</head>
+<body>
+    <div class="header">
+        <div class="top-nav-bar">
+            <div class="brand">blackDOT</div>
+            <ul class="top-nav-bar-list">
+                <li>
+                    <a href="/index.html" class="home">Home</a>
+                </li>
+                <li>
+                    <a href="/myaccount" class="myaccount">My Account</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    <span id="cart-number"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <!-- script added -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="/images/product1.jpg" alt="Product1">
+                </div>
+                <div class="product-det">
+                    <div class="product-name">Product-1</div>
+                    <div class="price">
+                        <span style="font-weight: 600;">Price: </span>
+                        <span>$14.99</span>
+                    </div>
+                    <div class="quantity-container">
+                        <label for="quantity">Quantity: </label>
+                        <div class="q-field">
+                            <button class="decrease-val q-btn" value="-">-</button>
+                            <input type="text" class="quantity" id="quantity" value="1">
+                            <button class="increse-val q-btn" value="+">+</button>
+                        </div>
+                    </div>
+                    <div class="delivery">
+                        <p>Choose delivery option:</p>
+                        <div class="delivery-options">
+                            <div class="same-day-option options">
+                                <input type="radio" id="same-day" name="delivery-type" value="1">
+                                <label for="same-day">Same Day Delivery</label>
+                            </div>
+                            <div class="fast-option options">
+                                <input type="radio" id="fast" name="delivery-type" value="2">
+                                <label for="fast">Fast Delivery</label>
+                            </div>
+                            <div class="regular-option options">
+                                <input type="radio" id="regular" name="delivery-type" value="3">
+                                <label for="regular">Next Day Delivery</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-desc">
+                    <div class="desc-heading">Features</div>
+                    <ul class="desc-list">
+                        <li>
+                            Elegant and Slim
+                        </li>
+                        <li>
+                            Durable
+                        </li>
+                        <li>
+                            Foldable
+                        </li>
+                        <li>
+                            4 Height Adjustable Options
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-specs">
+                    <div class="specs-heading">
+                        Specification
+                    </div>
+                    <div class="specs-table">
+                        <table>
+                            <tr>
+                                <td class="first">Model Name</td>
+                                <td class="second">DXR-29</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Color</td>
+                                <td class="second">Raven Black</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Dimensions</td>
+                                <td class="second">14 X 12 x 2 inch</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Material</td>
+                                <td class="second">Wooden</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Height Ajustable</td>
+                                <td class="second">Yes</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Adjustable Range</td>
+                                <td class="second">1-4</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="order-container">
+                <h1>Order Summary</h3>
+                <table class="order-details">
+                    <tr>
+                        <td class="first order-items">Items <span id="item-number">(1)</span></td>
+                        <td class="second order-items">42.75</td>
+                    </tr>
+                    <tr>
+                        <td class="first order-items">Shipping & Handling</td>
+                        <td class="second order-items">4.99</td>
+                    </tr>
+                    <tr>
+                        <td class="first order-items">Coupons</td>
+                        <td class="second order-items">4.99</td>
+                    </tr>
+                </table>
+                <div class="order-total">
+                    <div class="first">Order Total</div>
+                    <div class="second">109.99</div>
+                </div>
+            </div>
+            <button class="order-btn">Place your order</button>
+        </div>
+    </div>
+    <script type="module" src="/scripts/cartpage.js"></script>
+</body>
+</html>

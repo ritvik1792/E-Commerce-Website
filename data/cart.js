@@ -1,14 +1,18 @@
-export const cart=[];
+export let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function saveToStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
 
 export function addToCart(productId) {
-    let macthingItem;
+    let macthingItem=cart.find(item=> item.productId===productId);
 
     // search for product in cart
-    cart.forEach((item) => {
-        if (productId == item.productId) {
-            macthingItem = item;
-        }
-    });
+    // cart.forEach((item) => {
+    //     if (productId == item.productId) {
+    //         macthingItem = item;
+    //     }
+    // });
 
     if (macthingItem) {
         macthingItem.quantity += 1;
@@ -18,10 +22,12 @@ export function addToCart(productId) {
             quantity: 1
         });
     }
+    saveToStorage();
 }
-export function UpdateCart(){
+export function UpdateCart() {
     let cartQuanitty = 0;
     cart.forEach(item => {
         cartQuanitty += item.quantity;
     })
+    saveToStorage();
 }

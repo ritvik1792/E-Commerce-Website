@@ -7,13 +7,6 @@ function saveToStorage() {
 export function addToCart(productId) {
     let macthingItem=cart.find(item=> item.productId===productId);
 
-    // search for product in cart
-    // cart.forEach((item) => {
-    //     if (productId == item.productId) {
-    //         macthingItem = item;
-    //     }
-    // });
-
     if (macthingItem) {
         macthingItem.quantity += 1;
     } else {
@@ -30,4 +23,5 @@ export function UpdateCart() {
         cartQuanitty += item.quantity;
     })
     saveToStorage();
+    return cartQuanitty;
 }

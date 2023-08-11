@@ -100,4 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
 })
 
+let cartNumber=document.getElementById('cart-number');
+
+if(cartNumber.innerText==='0'){
+    cartNumber.style.opacity=1;
+}
+cartNumber.innerText=UpdateCart();
 

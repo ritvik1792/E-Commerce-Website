@@ -13,7 +13,7 @@ export const products=[
         desc:{
             features:['Elegant and Slim', 'Durable','Foldable','4 Height Adjustable Options'],
             specs:{
-                modelNmae: 'DXR-29',
+                modelName: 'DXR-29',
                 color: 'Raven Black',
                 dimensions: '14 X 12 X 2 inch',
                 material: 'wooden',
@@ -35,7 +35,7 @@ export const products=[
         desc:{
             features:['Elegant and Slim', 'Durable','Foldable'],
             specs:{
-                modelNmae: 'DXR-30',
+                modelName: 'DXR-30',
                 color: 'Sea Blue',
                 dimensions: '16 X 14 X 2 inch',
                 material: 'metal',
@@ -56,7 +56,7 @@ export const products=[
         desc:{
             features:['Strong', 'Durable','Foldable','3 Height Adjustable Options','Non-Slippery'],
             specs:{
-                modelNmae: 'DXR-10',
+                modelName: 'DXR-10',
                 color: 'Raven Grey',
                 dimensions: '14 X 12 X 2 inch',
                 material: 'plastic',
@@ -77,7 +77,7 @@ export const products=[
         desc:{
             features:['Elegant and Slim', 'Durable','Foldable','4 Height Adjustable Options'],
             specs:{
-                modelNmae: 'DXR-29',
+                modelName: 'DXR-29',
                 color: 'Raven Black',
                 dimensions: '14 X 12 X 2 inch',
                 material: 'mettal',
@@ -98,7 +98,7 @@ export const products=[
         desc:{
             features:['Durable','Foldable','Easy to Carry'],
             specs:{
-                modelNmae: 'DXR-09',
+                modelName: 'DXR-09',
                 color: 'Silver',
                 dimensions: '14 X 12 X 2 inch',
                 material: 'wooden',

@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Labrada&family=Mynerve&family=Prompt&display=swap"
         rel="stylesheet">
-        <title>blackDOT</title>
+        <script src="https://kit.fontawesome.com/9bba81049d.js" crossorigin="anonymous"></script>
+    <title>blackDOT</title>
     </head>
     
     <body>
@@ -29,7 +30,6 @@
                     <div class="myaccount">
                         <div class="myaccount-heading">
                             My Account
-                            <i class="fa fa-caret-down"></i>
                         </div>
                         <div class="myaccount-content">
                             <!-- <a href="account.html" class="Signin">Sign In</a>
@@ -38,6 +38,11 @@
                             <span class="Signup">Sign Up</span>
                         </div>
                     </div>
+                </li>
+                <li>
+                    <a href="/cartpage.html" style="text-decoration: none; color: white;">
+                        <i class="fa-solid fa-cart-shopping fa-lg"><span id="cart-number">0</span></i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -236,16 +241,18 @@
             <div class="left-bar">
                 <ul>
                     <li>
-                        <a href="/">All</a>
+                        <!-- <a href="/">All</a> -->
+                        <span data-id="all">All</span>
                     </li>
                     <li>
-                        <a href="/premium">Premium</a>
+                        <!-- <a href="/premium">Premium</a> -->
+                        <span data-id="premium">Premium</span>
                     </li>
                     <li>
-                        <a href="/BestSellers"> Best Sellers</a>
+                        <span data-id="bestSeller"> Best Sellers</span>
                     </li>
                     <li>
-                        <a href="/">Standard</a>
+                        <span data-id="standard">Standard</span>
                     </li>
                 </ul>
             </div>
